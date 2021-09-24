@@ -1,0 +1,11 @@
+C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\ModelDTOs\bin\Debug\net5.0\ModelDTOs.deps.json
+C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\ModelDTOs\bin\Debug\net5.0\ModelDTOs.dll
+C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\ModelDTOs\bin\Debug\net5.0\ref\ModelDTOs.dll
+C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\ModelDTOs\bin\Debug\net5.0\ModelDTOs.pdb
+C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\ModelDTOs\obj\Debug\net5.0\ModelDTOs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\ModelDTOs\obj\Debug\net5.0\ModelDTOs.AssemblyInfoInputs.cache
+C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\ModelDTOs\obj\Debug\net5.0\ModelDTOs.AssemblyInfo.cs
+C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\ModelDTOs\obj\Debug\net5.0\ModelDTOs.csproj.CoreCompileInputs.cache
+C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\ModelDTOs\obj\Debug\net5.0\ModelDTOs.dll
+C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\ModelDTOs\obj\Debug\net5.0\ref\ModelDTOs.dll
+C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\ModelDTOs\obj\Debug\net5.0\ModelDTOs.pdb
