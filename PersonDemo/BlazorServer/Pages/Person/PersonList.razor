@@ -3,6 +3,7 @@
 @using Business.Interfaces
 @using BlazorServer.Helper
 @using ModelDTOs
+@using System.Diagnostics.Eventing.Reader
 
 @inject IPersonManager _personManager
 @inject NavigationManager _navigationManager
@@ -62,10 +63,14 @@
 </div>
 
 
+<DeleteConfirmation IsParentComponentProcessing="IsProcessing" ConfirmationChanged="ConfirmDelete_Click"></DeleteConfirmation>
+
 @code {
 
     public IEnumerable<PersonDTO> Persons { get; set; } = new List<PersonDTO>();
     private int? DeletePersonId { get; set; } = null;
+
+    private bool IsProcessing { get; set; } = false;
 
 
     protected override async Task OnInitializedAsync()
@@ -78,6 +83,21 @@
         DeletePersonId = personId;
 
         await _jsRuntime.InvokeVoidAsync("ShowDeleteConfirmationModal");
+    }
+
+    public async Task ConfirmDelete_Click(bool isConfirmed)
+    {
+        IsProcessing = true;
+
+        if (isConfirmed && DeletePersonId != null)
+        {
+            await _personManager.DeletePersonAsync(DeletePersonId.Value);
+            await _jsRuntime.ToastrSuccess("Person deleted successfully");
+            Persons = await _personManager.GetAllPersonsAsync();
+        }
+
+        await _jsRuntime.InvokeVoidAsync("HideDeleteConfirmationModal");
+        IsProcessing = false;
     }
 
 }

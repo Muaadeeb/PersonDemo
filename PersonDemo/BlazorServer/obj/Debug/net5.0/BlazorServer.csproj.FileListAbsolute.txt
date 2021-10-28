@@ -100,3 +100,5 @@ C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\BlazorServer\obj\De
 C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\BlazorServer\obj\Debug\net5.0\RazorDeclaration\Pages\Person\PersonUpsert.razor.g.cs
 C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\BlazorServer\obj\Debug\net5.0\Razor\Pages\Person\PersonList.razor.g.cs
 C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\BlazorServer\obj\Debug\net5.0\Razor\Pages\Person\PersonUpsert.razor.g.cs
+C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\BlazorServer\obj\Debug\net5.0\RazorDeclaration\Shared\DeleteConfirmation.razor.g.cs
+C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\BlazorServer\obj\Debug\net5.0\Razor\Shared\DeleteConfirmation.razor.g.cs

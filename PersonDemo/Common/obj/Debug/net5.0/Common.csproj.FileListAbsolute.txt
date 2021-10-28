@@ -2,7 +2,6 @@ C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\Common\bin\Debug\ne
 C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\Common\bin\Debug\net5.0\Common.dll
 C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\Common\bin\Debug\net5.0\ref\Common.dll
 C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\Common\bin\Debug\net5.0\Common.pdb
-C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\Common\obj\Debug\net5.0\Common.csproj.AssemblyReference.cache
 C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\Common\obj\Debug\net5.0\Common.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\Common\obj\Debug\net5.0\Common.AssemblyInfoInputs.cache
 C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\Common\obj\Debug\net5.0\Common.AssemblyInfo.cs
@@ -10,3 +9,4 @@ C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\Common\obj\Debug\ne
 C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\Common\obj\Debug\net5.0\Common.dll
 C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\Common\obj\Debug\net5.0\ref\Common.dll
 C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\Common\obj\Debug\net5.0\Common.pdb
+C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\Common\obj\Debug\net5.0\Common.csproj.AssemblyReference.cache

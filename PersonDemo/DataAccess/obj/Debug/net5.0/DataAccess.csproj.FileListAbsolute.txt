@@ -12,3 +12,4 @@ C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\DataAccess\obj\Debu
 C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
 C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\DataAccess\obj\Debug\net5.0\DataAccess.pdb
 C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\DataAccess\obj\Debug\net5.0\DataAccess.genruntimeconfig.cache
+C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\DataAccess\obj\Debug\net5.0\DataAccess.csproj.AssemblyReference.cache

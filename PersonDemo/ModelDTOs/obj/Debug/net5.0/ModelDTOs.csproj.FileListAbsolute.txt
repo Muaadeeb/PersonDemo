@@ -9,3 +9,4 @@ C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\ModelDTOs\obj\Debug
 C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\ModelDTOs\obj\Debug\net5.0\ModelDTOs.dll
 C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\ModelDTOs\obj\Debug\net5.0\ref\ModelDTOs.dll
 C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\ModelDTOs\obj\Debug\net5.0\ModelDTOs.pdb
+C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\ModelDTOs\obj\Debug\net5.0\ModelDTOs.csproj.AssemblyReference.cache

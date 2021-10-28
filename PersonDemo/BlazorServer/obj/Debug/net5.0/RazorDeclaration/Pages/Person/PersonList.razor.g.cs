@@ -103,6 +103,13 @@ using ModelDTOs;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 6 "C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\BlazorServer\Pages\Person\PersonList.razor"
+using System.Diagnostics.Eventing.Reader;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/person-list")]
     public partial class PersonList : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -112,11 +119,13 @@ using ModelDTOs;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 65 "C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\BlazorServer\Pages\Person\PersonList.razor"
+#line 68 "C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\BlazorServer\Pages\Person\PersonList.razor"
        
 
     public IEnumerable<PersonDTO> Persons { get; set; } = new List<PersonDTO>();
     private int? DeletePersonId { get; set; } = null;
+
+    private bool IsProcessing { get; set; } = false;
 
 
     protected override async Task OnInitializedAsync()
@@ -129,6 +138,21 @@ using ModelDTOs;
         DeletePersonId = personId;
 
         await _jsRuntime.InvokeVoidAsync("ShowDeleteConfirmationModal");
+    }
+
+    public async Task ConfirmDelete_Click(bool isConfirmed)
+    {
+        IsProcessing = true;
+
+        if (isConfirmed && DeletePersonId != null)
+        {
+            await _personManager.DeletePersonAsync(DeletePersonId.Value);
+            await _jsRuntime.ToastrSuccess("Person deleted successfully");
+            Persons = await _personManager.GetAllPersonsAsync();
+        }
+
+        await _jsRuntime.InvokeVoidAsync("HideDeleteConfirmationModal");
+        IsProcessing = false;
     }
 
 

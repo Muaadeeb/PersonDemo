@@ -11,7 +11,6 @@ namespace BlazorServer.Pages.Person
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
-    using Microsoft.AspNetCore.Components;
 #nullable restore
 #line 1 "C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\BlazorServer\_Imports.razor"
 using System.Net.Http;
@@ -82,6 +81,36 @@ using BlazorServer.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\BlazorServer\Pages\Person\PersonUpsert.razor"
+using Business.Interfaces;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\BlazorServer\Pages\Person\PersonUpsert.razor"
+using ModelDTOs;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\BlazorServer\Pages\Person\PersonUpsert.razor"
+using Microsoft.AspNetCore.Components;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 7 "C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\BlazorServer\Pages\Person\PersonUpsert.razor"
+using BlazorServer.Helper;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/person/create")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/person/edit/{PersonId:int}")]
     public partial class PersonUpsert : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -89,6 +118,76 @@ using BlazorServer.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 51 "C:\Users\timothy.ingledue\source\repos\PersonDemo\PersonDemo\BlazorServer\Pages\Person\PersonUpsert.razor"
+       
+
+    [Parameter]
+    public int? PersonId { get; set; }
+
+    private PersonDTO PersonDto { get; set; } = new PersonDTO();
+    private string Title { get; set; } = "Create";
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (PersonId != null)
+        {
+            Title = "Update";
+            PersonDto = await _personManager.GetPersonAsync(PersonId.Value);
+        }
+        else
+        {
+            Title = "Create";
+            PersonDto = new PersonDTO();
+        }
+    }
+
+    private async Task HandlePersonUpsert()
+    {
+        try
+        {
+            if (PersonDto.PersonId != 0 && Title == "Update")
+            {
+                var updateResult = await _personManager.UpdatePersonAsync(PersonDto);
+
+                if (updateResult != null)
+                {
+                    await _jsRuntime.ToastrSuccess("Person updated successfully.");
+                }
+                else
+                {
+                    await _jsRuntime.ToastrError("Something went wrong.  Person was not successfully updated, try again.");
+                }
+            }
+            else
+            {
+                var createdResult = await _personManager.CreatePersonAsync(PersonDto);
+                if (createdResult != null)
+                {
+                    await _jsRuntime.ToastrSuccess("Person created successfully.");
+                }
+                else
+                {
+                    await _jsRuntime.ToastrError("Something went wrong.  Person was not successfully created, try again.");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            throw new Exception($"Whoops! Location: Handle Person Upsert -> {ex.Message}");
+        }
+
+        _navigationManager.NavigateTo("person-list");
+    }
+
+
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime _jsRuntime { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IPersonManager _personManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager _navigationManager { get; set; }
     }
 }
 #pragma warning restore 1591
